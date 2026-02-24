@@ -1,0 +1,123 @@
+{
+  "scenarios": [
+    {
+      "name": "tightening_burst",
+      "steps": [
+        {
+          "delay_sec": 0.0,
+          "event": "tightening",
+          "payload": {
+            "torque_nm": 10.5,
+            "angle_deg": 100.0,
+            "ok": true,
+            "mids": [
+              "0061",
+              "1201",
+              "1202"
+            ]
+          }
+        },
+        {
+          "delay_sec": 0.4,
+          "event": "tightening",
+          "payload": {
+            "torque_nm": 11.2,
+            "angle_deg": 112.0,
+            "ok": true,
+            "mids": [
+              "0061",
+              "1201",
+              "1202",
+              "0900"
+            ]
+          }
+        },
+        {
+          "delay_sec": 0.4,
+          "event": "tightening",
+          "payload": {
+            "torque_nm": 9.4,
+            "angle_deg": 98.0,
+            "ok": false,
+            "mids": [
+              "0061",
+              "1201",
+              "1202",
+              "0071"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "alarm_cycle",
+      "steps": [
+        {
+          "delay_sec": 0.0,
+          "event": "alarm",
+          "payload": {
+            "code": "0101",
+            "text": "Over torque warning",
+            "mids": [
+              "0071",
+              "1000"
+            ]
+          }
+        },
+        {
+          "delay_sec": 0.2,
+          "event": "io_change",
+          "payload": {
+            "key": "input_01",
+            "value": true,
+            "mids": [
+              "0211"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "trace_stream",
+      "steps": [
+        {
+          "delay_sec": 0.0,
+          "event": "trace",
+          "payload": {
+            "trace_points": [
+              10,
+              12,
+              15,
+              18,
+              17,
+              16,
+              14
+            ],
+            "mids": [
+              "0900"
+            ]
+          }
+        },
+        {
+          "delay_sec": 0.3,
+          "event": "trace",
+          "payload": {
+            "trace_points": [
+              11,
+              13,
+              16,
+              19,
+              20,
+              18,
+              15
+            ],
+            "mids": [
+              "0900"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,2598 @@
+[
+  {
+    "mid": "0001",
+    "name": "Application Communication start",
+    "category": "session",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      6,
+      7
+    ],
+    "payload_schema": {},
+    "ack_strategy": "session_specific",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0002",
+    "name": "Application Communication start acknowledge",
+    "category": "session",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "payload_schema": {},
+    "ack_strategy": "session_specific",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0003",
+    "name": "Application Communication stop",
+    "category": "session",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "session_specific",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0004",
+    "name": "Application Communication negative acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      2,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0005",
+    "name": "Application Communication positive acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0006",
+    "name": "Application data message request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0008",
+    "name": "Application data message subscription",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0009",
+    "name": "Application Data Message unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0010",
+    "name": "Parameter set ID upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0011",
+    "name": "Parameter set ID upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0012",
+    "name": "Parameter set data upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0013",
+    "name": "Parameter set data upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0014",
+    "name": "Parameter set selected subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0015",
+    "name": "Parameter set selected",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0016",
+    "name": "Parameter set selected acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0017",
+    "name": "Parameter set selected unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0018",
+    "name": "Select Parameter set",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0019",
+    "name": "Set Parameter set batch size",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0020",
+    "name": "Reset Parameter set batch counter",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0021",
+    "name": "Lock at batch done subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0022",
+    "name": "Lock at batch done upload",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0023",
+    "name": "Lock at batch done upload Acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0024",
+    "name": "Lock at batch done unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0025",
+    "name": "Parameter user set download request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0030",
+    "name": "Job ID upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0031",
+    "name": "Job ID upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0032",
+    "name": "Job data upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0033",
+    "name": "Job data upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0034",
+    "name": "Job info subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0035",
+    "name": "Job info",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0036",
+    "name": "Job info acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0037",
+    "name": "Job info unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0038",
+    "name": "Select Job",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0039",
+    "name": "Job restart",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0040",
+    "name": "Tool data upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0041",
+    "name": "Tool data upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0042",
+    "name": "Disable tool",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      0,
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0043",
+    "name": "Enable tool",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      0,
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0044",
+    "name": "Disconnect tool request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0045",
+    "name": "Set calibration value request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0046",
+    "name": "Set primary tool request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0047",
+    "name": "Tool Pairing handling",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0048",
+    "name": "Tool Pairing status",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0050",
+    "name": "Vehicle ID Number download request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0051",
+    "name": "Vehicle ID Number subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0052",
+    "name": "Vehicle ID Number",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0053",
+    "name": "Vehicle ID Number acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0054",
+    "name": "Vehicle ID Number unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0060",
+    "name": "Last tightening result data subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0061",
+    "name": "Last tightening result data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      998,
+      999
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0062",
+    "name": "Last tightening result data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0063",
+    "name": "Last tightening result data unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0064",
+    "name": "Old tightening result upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      10,
+      999
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0065",
+    "name": "Old tightening result upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0066",
+    "name": "Number of offline results",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0067",
+    "name": "Tightening Result List Upload",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0070",
+    "name": "Alarm subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0071",
+    "name": "Alarm",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0072",
+    "name": "Alarm acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0073",
+    "name": "Alarm unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0074",
+    "name": "Alarm acknowledged on controller",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0075",
+    "name": "Alarm acknowledged on controller acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0076",
+    "name": "Alarm status",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      3
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0077",
+    "name": "Alarm status acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0078",
+    "name": "Acknowledge alarm remotely on controller",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0080",
+    "name": "Read time upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0081",
+    "name": "Read time upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0082",
+    "name": "Set Time",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0090",
+    "name": "Multi-spindle status subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0091",
+    "name": "Multi-spindle status",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0092",
+    "name": "Multi-spindle status acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0093",
+    "name": "Multi-spindle status unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0100",
+    "name": "Multi-spindle result subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0101",
+    "name": "Multi-spindle result",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0102",
+    "name": "Multi-spindle result acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0103",
+    "name": "Multi spindle result unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0105",
+    "name": "Last PowerMACS tightening result data subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0106",
+    "name": "Last PowerMACS tightening result Station data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0107",
+    "name": "Last Power MACS tightening result Bolt data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0108",
+    "name": "Last Power MACS tightening result data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0109",
+    "name": "Last Power MACS tightening result data unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0110",
+    "name": "Display user text on compact",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0111",
+    "name": "Display user text on graph",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0113",
+    "name": "Flash green light on tool",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0120",
+    "name": "Job line control info subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0121",
+    "name": "Job line control started",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0122",
+    "name": "Job line control alert 1",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0123",
+    "name": "Job line control alert 2",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0124",
+    "name": "Job line control done",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0125",
+    "name": "Job line control info acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0126",
+    "name": "Job line control info unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0127",
+    "name": "Abort Job",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0128",
+    "name": "Job batch increment",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0129",
+    "name": "Job batch decrement",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0130",
+    "name": "Job off",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0131",
+    "name": "Set Job line control start",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0132",
+    "name": "Set Job line alert 1",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0133",
+    "name": "Set Job line alert 2",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0140",
+    "name": "Execute dynamic Job request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2,
+      3,
+      4,
+      999
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0150",
+    "name": "Identifier download request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0151",
+    "name": "Multiple identifier and result parts subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0152",
+    "name": "Multiple identifier and result parts",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0153",
+    "name": "Multiple identifiers and result parts acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0154",
+    "name": "Multiple identifier and result parts unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0155",
+    "name": "Bypass Identifier",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0156",
+    "name": "reset latest Identifier",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0157",
+    "name": "reset all Identifiers",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0200",
+    "name": "Set externally controlled relays",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0210",
+    "name": "Status externally monitored inputs subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0211",
+    "name": "Status externally monitored inputs",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0212",
+    "name": "Status externally monitored inputs acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0213",
+    "name": "Status externally monitored inputs unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0214",
+    "name": "IO device status request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0215",
+    "name": "IO device status reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0216",
+    "name": "Relay function subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0217",
+    "name": "Relay function",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0218",
+    "name": "Relay function acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0219",
+    "name": "Relay function unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0220",
+    "name": "Digital input function subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0221",
+    "name": "Digital input function",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0222",
+    "name": "Digital input function acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0223",
+    "name": "Digital input function unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0224",
+    "name": "Set digital input function",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0225",
+    "name": "Reset digital input function",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0240",
+    "name": "User data download",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0241",
+    "name": "User data subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0242",
+    "name": "User data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0243",
+    "name": "User data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0244",
+    "name": "User data unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0245",
+    "name": "User data download with offset",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0250",
+    "name": "Selector socket info subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0251",
+    "name": "Selector socket info",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0252",
+    "name": "Selector socket info acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0253",
+    "name": "Selector socket info unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0254",
+    "name": "Selector control green lights",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      0,
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0255",
+    "name": "Selector control red lights",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      0,
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0260",
+    "name": "Tool tag ID request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0261",
+    "name": "Tool tag ID subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0262",
+    "name": "Tool tag ID",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0263",
+    "name": "Tool tag ID acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0264",
+    "name": "Tool tag ID unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0265",
+    "name": "External Tool tag ID and status",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0270",
+    "name": "Controller reboot request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0300",
+    "name": "Histogram upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0301",
+    "name": "Histogram upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0400",
+    "name": "Automatic/Manual mode subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0401",
+    "name": "Automatic/Manual mode",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0402",
+    "name": "Automatic/Manual mode acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0403",
+    "name": "Automatic/Manual mode unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0410",
+    "name": "AutoDisable settings request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0411",
+    "name": "AutoDisable settings reply",
+    "category": "reply",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0420",
+    "name": "Open Protocol commands disabled subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0421",
+    "name": "Open Protocol commands disabled",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0422",
+    "name": "Open Protocol commands disabled acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0423",
+    "name": "Open Protocol commands disabled unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0500",
+    "name": "Motor tuning result data subscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0501",
+    "name": "Motor tuning result data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0502",
+    "name": "Motor tuning result data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0503",
+    "name": "Motor tuning result data unsubscribe",
+    "category": "subscription_start",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0504",
+    "name": "Motor tuning request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0700",
+    "name": "Tightening data download status",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0701",
+    "name": "Tool list upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0702",
+    "name": "Tool Data upload reply with generic data",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0703",
+    "name": "Set calibration value request with generic data",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0900",
+    "name": "Trace curve data message",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      3
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "0901",
+    "name": "Traces Plot Parameters Message",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      3
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1000",
+    "name": "Alarm",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1001",
+    "name": "Alarm acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1200",
+    "name": "MID 1200 (Undocumented title in index)",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1201",
+    "name": "Operation result Overall data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2,
+      3
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1202",
+    "name": "Operation result object data",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1,
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1203",
+    "name": "Operation result data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1601",
+    "name": "Dynamic identifier message",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1602",
+    "name": "Dynamic identifier data acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1900",
+    "name": "Selector socket info",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      0,
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "1901",
+    "name": "Selector socket control",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2100",
+    "name": "Device command",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2500",
+    "name": "Tightening Program Message download",
+    "category": "event_or_data",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      2
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2501",
+    "name": "Tightening Program Message Upload",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2504",
+    "name": "Select Parameter set, Dynamic Job Included",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2505",
+    "name": "Select Parameter set dynamically.",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2600",
+    "name": "Mode ID upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2601",
+    "name": "Mode ID upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2602",
+    "name": "Mode data upload request",
+    "category": "request",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "direct_reply_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2603",
+    "name": "Mode data upload reply",
+    "category": "reply",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2604",
+    "name": "Mode selected",
+    "category": "event_or_data",
+    "direction": "controller_to_integrator",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "special_ack_or_9997_9998",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2605",
+    "name": "Mode selected acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "2606",
+    "name": "Select Mode",
+    "category": "command",
+    "direction": "integrator_to_controller",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "app_ack_0005_or_0004",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "9997",
+    "name": "Communication acknowledge",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "9998",
+    "name": "Communication acknowledge error",
+    "category": "ack",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "none",
+    "error_rules": [],
+    "profile_overrides": {}
+  },
+  {
+    "mid": "9999",
+    "name": "Keep alive message",
+    "category": "session",
+    "direction": "bidirectional",
+    "supported_revisions": [
+      1
+    ],
+    "payload_schema": {},
+    "ack_strategy": "session_specific",
+    "error_rules": [],
+    "profile_overrides": {}
+  }
+]
