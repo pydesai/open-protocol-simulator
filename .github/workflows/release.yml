@@ -3,7 +3,7 @@ name: Create GitHub Release
 on:
   push:
     tags:
-      - "v*"
+      - "v*.*.*"
   workflow_dispatch:
 
 permissions:
@@ -22,7 +22,5 @@ jobs:
           body: |
             Docker image published to GHCR:
             - `ghcr.io/${{ github.repository }}:${{ github.ref_name }}`
-            - `ghcr.io/${{ github.repository }}:latest`
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
