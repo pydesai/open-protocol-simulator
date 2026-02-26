@@ -373,6 +373,25 @@ class SimulatorState:
             )
         return messages
 
+    def _build_mid_0061_revision_1_payload(self, latest: dict[str, Any]) -> bytes:
+        """Build a fixed-width MID 0061 rev 1 payload (211 bytes, header excluded)."""
+        tightening_id = str(latest.get("tightening_id", self._state["results"]["last_tightening_id"])).rjust(10, "0")
+        status = str(latest.get("status", "OK")).upper()
+        status_flag = "1" if status == "OK" else "0"
+
+        # Keep a realistic Atlas-style rev 1 layout footprint so parsers expecting
+        # fixed-position fields receive a full-length payload.
+        base = (
+            f"01{tightening_id}"
+            f"02{status_flag}"
+            "0103airbag7"
+            "04KPOL3456JKL0897"
+            "0500060030700008000009010011112000840"
+            "13001400140012001500073916000001709991800000"
+            "1900000202001-06-02:09:54:09212001-05-29:12:34:3322123345675"
+        )
+        return base[:211].ljust(211, " ").encode("ascii")
+
     async def build_data_for_mid(self, mid: str) -> bytes:
         async with self._lock:
             if mid == "0015":
@@ -385,9 +404,7 @@ class SimulatorState:
                 return ascii_payload("01", str(self._state["vin"]["current"]).ljust(25)[:25])
             if mid == "0061":
                 latest = self._state["results"]["history"][-1] if self._state["results"]["history"] else {}
-                tid = str(latest.get("tightening_id", self._state["results"]["last_tightening_id"])).rjust(10, "0")
-                status = latest.get("status", "OK")
-                return ascii_payload("01", tid, "02", status.ljust(3)[:3])
+                return self._build_mid_0061_revision_1_payload(latest)
             if mid == "0071":
                 alarm = self._state["alarms"]["active"][-1] if self._state["alarms"]["active"] else {"code": "0000", "text": "No alarm"}
                 return ascii_payload("01", str(alarm["code"]).rjust(4, "0"), "02", str(alarm["text"]).ljust(25)[:25])

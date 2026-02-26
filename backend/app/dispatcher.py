@@ -29,6 +29,19 @@ REQUEST_TO_REPLY_MAP: dict[str, str] = {
     "2602": "2603",
 }
 
+# Some request-category MIDs are command-style in the spec and should
+# return application ACK/NACK rather than a direct reply MID.
+REQUEST_ACK_ONLY_MIDS: set[str] = {
+    "0025",
+    "0044",
+    "0045",
+    "0046",
+    "0140",
+    "0150",
+    "0270",
+    "0504",
+}
+
 
 def _extract_first_int(data: str, digits: int, default: str) -> str:
     m = re.search(rf"(\d{{{digits}}})", data)
@@ -238,6 +251,13 @@ class OpenProtocolDispatcher:
             return [build_message(mid=target, data=data, revision=1, append_nul=(target != "0900"), binary=(target == "0900"))]
 
         if definition.category == "request":
+            if mid in REQUEST_ACK_ONLY_MIDS:
+                allowed, err = await self.state.ensure_command_allowed(session)
+                if not allowed:
+                    return [build_message(mid="0004", data=format_mid_error_payload(mid, err), revision=1)]
+                await self._apply_simple_command_side_effects(msg)
+                return [build_message(mid="0005", data=format_mid_ack_payload(mid), revision=1)]
+
             reply_mid = REQUEST_TO_REPLY_MAP.get(mid)
             if not reply_mid:
                 plus_one = f"{int(mid) + 1:04d}"
@@ -270,4 +290,3 @@ class OpenProtocolDispatcher:
 
         # Event/data message coming from integrator side: accept command-style for compatibility.
         return [build_message(mid="0005", data=format_mid_ack_payload(mid), revision=1)]
-

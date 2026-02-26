@@ -45,7 +45,33 @@ class DispatcherTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(resp[0].mid, "0005")
         self.assertIn("0060", self.session.subscriptions)
 
+    async def test_mid_0061_rev1_response_uses_full_length_payload(self) -> None:
+        await self.dispatcher.dispatch(self.session, build_message(mid="0001", revision=7, data=b"01"))
+        resp = await self.dispatcher.dispatch(self.session, build_message(mid="0006", revision=1, data=b"0061"))
+        self.assertEqual(resp[0].mid, "0061")
+        self.assertEqual(resp[0].header.length, 231)
+        self.assertEqual(len(resp[0].data), 211)
+
+    async def test_request_mids_with_command_style_ack(self) -> None:
+        mids = ("0025", "0044", "0045", "0046", "0140", "0150", "0270", "0504")
+        payload_by_mid = {
+            "0045": b"0102003550",
+            "0046": b"02",
+            "0150": b"WORKORDER-123",
+        }
+
+        for mid in mids:
+            session = SessionContext(session_id=f"s_{mid}", role=SessionRole.CLASSIC, remote="127.0.0.1:9999")
+            await self.dispatcher.dispatch(session, build_message(mid="0001", revision=7, data=b"01"))
+            payload = payload_by_mid.get(mid, b"")
+            resp = await self.dispatcher.dispatch(session, build_message(mid=mid, revision=1, data=payload))
+            self.assertEqual(resp[0].mid, "0005", mid)
+
+    async def test_mid_0100_allows_revision_1_in_atlas_profile(self) -> None:
+        await self.dispatcher.dispatch(self.session, build_message(mid="0001", revision=7, data=b"01"))
+        resp = await self.dispatcher.dispatch(self.session, build_message(mid="0100", revision=1, data=b""))
+        self.assertEqual(resp[0].mid, "0005")
+
 
 if __name__ == "__main__":
     unittest.main()
-
